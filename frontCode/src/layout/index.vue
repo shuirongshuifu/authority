@@ -29,7 +29,8 @@
           @click="isCollapse = !isCollapse"
         ></i>
         <h3>
-          登录角色：<span class="usernameC">{{ username }}</span>
+          <span v-if="!IsPhone">登录角色：</span
+          ><span class="usernameC">{{ username }}</span>
         </h3>
         <el-button
           icon="el-icon-circle-close"
@@ -49,6 +50,7 @@
 
 <script>
 import myitem from "./components/myitem.vue";
+import { IsPhone } from "@/utils/index.js";
 import { mapState } from "vuex";
 export default {
   name: "Home",
@@ -142,6 +144,7 @@ export default {
       ],
       menuArr: this.$store.state.menu.menuTree,
       username: sessionStorage.getItem("username"),
+      IsPhone: IsPhone(),
     };
   },
   // computed: {
@@ -149,6 +152,11 @@ export default {
   //     menuArr: (state) => state.menu.menuTree,
   //   }),
   // },
+  created() {
+    if (this.IsPhone) {
+      this.isCollapse = true;
+    }
+  },
   mounted() {
     this.activeIndex = this.$route.path == "/home" ? "/" : this.$route.path;
   },

@@ -13,7 +13,7 @@
       <el-input
         style="width: 240px"
         v-model.trim="searchWord"
-        size="small"
+        size="mini"
         placeholder="回车Enter键 搜索角色信息"
         prefix-icon="el-icon-search"
         clearable

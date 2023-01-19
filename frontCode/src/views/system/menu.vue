@@ -4,17 +4,17 @@
     <div class="addBtnAndSearchBox">
       <span>
         <el-button
-          style="font-weight: 500"
+          style="margin: 12px 0 2px 0"
           type="primary"
-          size="small"
+          size="mini"
           icon="el-icon-refresh"
           @click="getMenu"
           >重新请求</el-button
         >
         <el-button
-          style="font-weight: 500"
+          style="margin-bottom: 6px"
           type="primary"
-          size="small"
+          size="mini"
           icon="el-icon-plus"
           @click="addMenuNode"
           >新增</el-button
@@ -23,7 +23,7 @@
       <el-input
         style="width: 240px"
         v-model.trim="searchWord"
-        size="small"
+        size="mini"
         placeholder="回车Enter键 搜索名称或url"
         prefix-icon="el-icon-search"
         clearable
