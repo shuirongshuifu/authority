@@ -20,6 +20,11 @@
         @keyup.enter.native="getTableData"
       ></el-input>
     </div>
+    <br />
+    <h3 style="color: #f0f">
+      大家不要修改笔者的超级管理员角色，可以自己新建角色，然后赋予菜单权限看效果
+    </h3>
+    <br />
     <div class="roleTable">
       <el-table
         :data="tableData"
@@ -230,6 +235,15 @@ export default {
     },
     // 编辑打开角色抽屉弹框（顺带回显数据）
     editRole(row) {
+      console.log("row", row);
+      if (row.roleId === 29) {
+        this.$message({
+          type: "error",
+          message: "超级管理员不允许编辑，请自己新建角色并赋予菜单树权限",
+          duration: 5000,
+        });
+        return;
+      }
       // this.reset()
       this.drawerObj.title = "编辑角色权限";
       this.drawerObj.drawer = true;
