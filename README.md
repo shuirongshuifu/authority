@@ -1,5 +1,5 @@
 # authority
-vue+express+mysql，搞懂权限系统
+vue+express+mysql，彻底搞懂权限系统
 
 网站演示效果：http://ashuai.work:8891/login
 
