@@ -1,5 +1,5 @@
 # authority
-vue+express+mysql，搞懂权限系统
+vue+express+mysql，带你彻底搞懂基于角色的权限管理系统（RBAC）
 
 网站演示效果：http://ashuai.work:8891/login
 
@@ -13,4 +13,4 @@ vue+express+mysql
 - 按钮树
 - ...
 
-如果您想了解一下，权限在前后端的一个流程，这个项目或许能够帮您一些忙
+如果您想了解一下，权限在前后端的一个**完整**流程，这个项目或许能够帮您一些忙
