@@ -1,5 +1,13 @@
 <template>
   <div>
+    <el-link
+      type="primary"
+      href="https://github.com/shuirongshuifu/authority"
+      target="_blank"
+      >点击跳转GitHub仓库</el-link
+    >
+    <br />
+    <br />
     <el-button
       @click="allVueRouterInScopes"
       size="small"
