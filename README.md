@@ -1,8 +1,8 @@
 # authority
 vue+express+mysql，带你彻底搞懂基于角色的权限管理系统（RBAC）
 
-网站演示效果：http://ashuai.work:8891/login
-文章教程地址：https://juejin.cn/post/7188808031801442363
+- 网站演示效果：http://ashuai.work:8891/login
+- 文章教程地址：https://juejin.cn/post/7188808031801442363
 
 vue+express+mysql
 
