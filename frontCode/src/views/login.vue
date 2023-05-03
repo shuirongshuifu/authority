@@ -18,7 +18,7 @@
           v-for="item in roleList"
           :key="item.value"
           :label="item.roleName + ' (' + item.roleRemark + ')'"
-          :value="item.menuIds"
+          :value="item.roleId + '-' + item.menuIds"
         >
         </el-option>
       </el-select>
@@ -60,7 +60,7 @@ export default {
       }
     },
     async loginIn() {
-      const res = await this.$store.dispatch("menu/tree_menu", this.value);
+      const res = await this.$store.dispatch("menu/tree_menu", this.value.split('-')[1]);
       if (res.code == 0) {
         /**
          * 登录成功以后也要动态添加一下路由tip1，或者异步重加载一下tip2
@@ -69,7 +69,7 @@ export default {
          * */
         router.addRoutes(store.state.menu.routerTree); // tip1: 注掉效果明显
         let i = this.roleList.findIndex((item) => {
-          return item.menuIds == this.value;
+          return item.menuIds == this.value.split('-')[1];
         });
         sessionStorage.setItem("username", this.roleList[i].roleName);
         this.$message({
